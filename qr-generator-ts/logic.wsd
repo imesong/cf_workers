@@ -1,0 +1,14 @@
+@startuml name
+start
+
+:接收请求;
+if (请求方法是 POST?) then (yes)
+    :调用 generateQRCode(request);
+    :生成 QR 码;
+    :返回 QR 码响应;
+else (no)
+    :返回 landing 页面;
+endif
+
+stop
+@enduml
